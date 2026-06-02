@@ -1,0 +1,91 @@
+# ============================================
+# 数学建模比赛 - Git 忽略规则
+# ============================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- MATLAB ---
+*.asv
+*.slxc
+*.slx~
+
+# --- 二进制数据文件（体积大，一般不上传Git） ---
+*.mat
+*.npz
+*.fig
+
+# --- 压缩包 ---
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# --- 大型二进制文档（不上传，已转写为Markdown） ---
+*.docx
+*.pdf
+*.pptx
+*.doc
+*.xlsx
+*.xls
+
+# --- 图片文件 ---
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# --- LaTeX ---
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# --- 系统文件 ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- 临时文件 ---
+*.tmp
+*.bak
+~$*
+*.temp
+
+# --- 知网/文献 ---
+*.caj
+*.kdh
+*.nh
+
+# --- Claude AI ---
+.claude/
+
+# --- catboost 训练缓存 ---
+catboost_info/

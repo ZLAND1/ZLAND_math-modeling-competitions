@@ -1,0 +1,64 @@
+✅ 终端编码重定向完成（原编码：gbk → 目标编码：utf-8）
+==================================================
+步骤1：加载并校验论文初步预处理数据
+==================================================
+✅ 初步预处理数据加载成功：840000行 × 10列
+✅ 无缺失值，符合论文4.3节数据质量要求
+✅ 分类特征已量化，符合论文预处理要求
+⚠️ YSM值异常（范围-3~66），论文要求0~20年，已裁剪
+✅ 分类特征（RT/AT）已转为整数类型，符合CatBoost要求
+
+==================================================
+步骤2：补充论文要求的特征衍生（初步预处理未覆盖）
+==================================================
+✅ 补充预处理完成，最终模型特征数：14
+
+==================================================
+步骤3：Stacking集成预测（第二问.pdf1-12节）
+==================================================
+🔍 折1/5 训练基模型...
+[LightGBM] [Info] Number of positive: 335962, number of negative: 336038
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.004310 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 1740
+[LightGBM] [Info] Number of data points in the train set: 672000, number of used features: 14
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.499943 -> initscore=-0.000226
+[LightGBM] [Info] Start training from score -0.000226
+🔍 折2/5 训练基模型...
+[LightGBM] [Info] Number of positive: 335962, number of negative: 336038
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.005688 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 1740
+[LightGBM] [Info] Number of data points in the train set: 672000, number of used features: 14
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.499943 -> initscore=-0.000226
+[LightGBM] [Info] Start training from score -0.000226
+🔍 折3/5 训练基模型...
+[LightGBM] [Info] Number of positive: 335962, number of negative: 336038
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.005444 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 1741
+[LightGBM] [Info] Number of data points in the train set: 672000, number of used features: 14
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.499943 -> initscore=-0.000226
+[LightGBM] [Info] Start training from score -0.000226
+🔍 折4/5 训练基模型...
+[LightGBM] [Info] Number of positive: 335961, number of negative: 336039
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.004480 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 1741
+[LightGBM] [Info] Number of data points in the train set: 672000, number of used features: 14
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.499942 -> initscore=-0.000232
+[LightGBM] [Info] Start training from score -0.000232
+🔍 折5/5 训练基模型...
+[LightGBM] [Info] Number of positive: 335961, number of negative: 336039
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.005844 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 1740
+[LightGBM] [Info] Number of data points in the train set: 672000, number of used features: 14
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.499942 -> initscore=-0.000232
+[LightGBM] [Info] Start training from score -0.000232
+✅ 预测结果保存至：D:/数学建模比赛/大数据挑战赛复赛2025826_829/DATA/任务B预测结果\维护需求预测结果.csv
